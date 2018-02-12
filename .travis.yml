@@ -1,2 +1,12 @@
+sudo: required
+dist: trusty
 language: node_js
+node_js:
+  - "9"
+env:
+  global:
+    - NODE_ENV=development
 before_script: cd Backend
+script:
+  - npm install
+  - npm run test
